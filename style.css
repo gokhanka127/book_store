@@ -1,0 +1,297 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* NAVBAR SECTION */
+
+.navbar {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.menu,
+.icons {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+}
+
+.menu li,
+.icons li {
+    margin: 0 10px;
+    &:hover{color: red; font-weight: bold;}
+}
+
+.icons li {
+    color: black
+}
+
+
+.bag_icon {
+    position: relative;
+}
+
+.bag_count {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    right: -0.5rem;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.bag_count:empty{
+    display: none;
+}
+
+/* SLIDER SECTION */
+
+.slider {
+    width: 80%;
+    margin: auto;
+}
+
+/* STORE SECTION */
+
+.store {
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    position: relative;
+}
+
+.filter_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 600px;
+    background-color: rgba(127, 255, 212, 0.234);
+    z-index: 0;
+}
+
+.filter {
+    list-style-type: none;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.filter li {
+    color: gray;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.filter li:hover {
+    color: crimson;
+    font-weight: bold;
+}
+
+.filter li.active {
+    color: crimson;
+    font-weight: bolder;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.book_card {
+    height: 400px;
+}
+
+.book_card img {
+    height: 350px;
+}
+
+.book_author {
+    font-family: "Open Sans", sans-serif;
+    color: gray;
+}
+
+.book_name {
+    font-weight: bold;
+}
+
+.book_rate .bi-star-fill {
+    color: rgb(155, 154, 154);
+}
+
+.book_rate .bi-star-fill.active {
+    color: chocolate;
+}
+
+.book_rate small {
+    color: gray;
+    font-size: medium;
+}
+
+.book_description {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.price_prev {
+    color: gray;
+    font-size: larger;
+}
+
+.btn_purple, .add_btn{
+    cursor: pointer;
+    width: 100%;
+    border: 2px solid crimson;
+    color: crimson;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn_purple, .add_btn:hover {
+    background-color: crimson;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+/* BASKET MODAL SECTION */
+
+.basket_modal {
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.248);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.basket_modal.active{
+    opacity: 1;
+    z-index: 100;
+}
+
+.basket_items {
+    width: 0;
+    background-color: white;
+    height: 100%;
+    float: right;
+    transition: all .3s ease-in-out;
+}
+
+.basket_modal.active .basket_items{
+    width: 450px;
+}
+
+.basket_items .bi-x {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.basket_items h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.basket_list {
+    list-style-type: none;
+    margin-top: 2rem;
+    max-height: 650px;
+    overflow-y: auto;
+}
+
+.basket_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-bottom: 2rem;
+}
+
+.basket_item_info{
+    width: 250px;
+}
+
+.basket_item_info h4 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.basket_item_info span {
+    cursor: pointer;
+    color: gray;
+}
+
+.book_count .decrease,
+.increase {
+    font-size: 24px;
+    font-weight: bold;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.book_count .number {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.basket_total {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10px;
+    align-items: center;
+    width: inherit;
+}
+
+.basket_total span {
+    font-weight: bolder;
+    font-size: larger;
+    margin-bottom: 1rem;
+}
+
+.basket_total button {
+    width: 200px;
+}
+
+.total_price:empty + .btn_purple{
+    display: none;
+}

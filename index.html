@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/asset/toastr.min.css">
+    <title>Book Store</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2 class="title">Book Store</h2>
+        <ul class="menu">
+            <li class="active">Books</li>
+            <li>Audio Books</li>
+            <li>Gift Cards</li>
+            <li>About Us</li>
+        </ul>
+        <ul class="icons">
+            <li><i class="bi bi-search"></i></li>
+            <li><i class="bi bi-person"></i></li>
+            <li class="bag_icon" onclick="toggleModal();">
+                <i class="bi bi-bag">
+                    <span class="bag_count"></span>
+                </i>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="slider">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/images/slider1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/slider2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/slider3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="store">
+        <div class="filter_bg">
+            <ul class="filter">
+                <li class="active">TÜMÜ</li>
+                <li>ROMAN</li>
+                <li>KİŞİSEL GELİŞİM</li>
+                <li>ÇOCUK</li>
+                <li>TARİH</li>
+                <li>BİLİM</li>
+                <li>FİNANS</li>
+            </ul>
+        </div>
+        <div class="row book_list">
+        </div>
+    </section>
+
+    <div class="basket_modal">
+        <div class="basket_items">
+            <i class="bi bi-x" onclick="toggleModal();"></i>
+            <h2>Your Items</h2>
+            <ul class="basket_list">
+                <li class="basket_item">
+                    No items in your basket.
+                </li>
+            </ul>
+            <div class="basket_total">
+                <span class="total_price"></span>
+                <button class="btn_purple">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="/asset/jquery-3.7.0.min.js"></script>
+    <script src="/asset/toastr.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
